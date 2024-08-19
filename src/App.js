@@ -44,8 +44,8 @@ function App() {
       for (let i = 1; i <= tempPoints; i++) {
         newList.push({
           number: i,
-          x: Math.random() * 95,
-          y: Math.random() * 92,
+          x: Math.random() * 90,
+          y: Math.random() * 90,
         });
       }
       setList(newList);
@@ -93,13 +93,13 @@ function App() {
 
   return (
     <div className="w-full h-screen">
-      <div className="w-1/2 m-auto h-screen shadow">
+      <div className="w-2/5 m-auto h-screen shadow">
         <div className="py-12 px-16">
           <h4 className="font-bold pb-2" style={{ color: title.color }}>
             {title.text}
           </h4>
           <div className="flex gap-1 flex-col">
-            <div className="flex gap-14">
+            <div className="flex gap-20">
               <p className="mb-1">Points:</p>
               <input
                 value={tempPoints}
@@ -109,20 +109,20 @@ function App() {
               />
             </div>
 
-            <div className="flex gap-9">
+            <div className="flex gap-11">
               <p>Time:</p>
               <br />
               <p>{time !== 0 ? time.toFixed(1) : "0.0"}s</p>
             </div>
           </div>
           <button
-            className="cursor-pointer active:bg-slate-300 min-w-[100px] border-1 bg-slate-200 hover:bg-slate-100 mb-10 text-center items-center rounded-sm font-bold border-black"
+            className="cursor-pointer active:bg-slate-300 min-w-[120px] border-1 bg-slate-100 hover:bg-slate-200 mb-3 text-center items-center rounded-sm font-bold border-black"
             onClick={handleClickButton}
           >
             {titleButton ? "Play" : "Reset"}
           </button>
 
-          <div className="relative border-1 h-[400px] border-black lg:border-l lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none p-4 flex flex-col justify-between leading-normal">
+          <div className="relative border-1 h-[440px] border-black lg:border-l lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none p-2 flex flex-col justify-between leading-normal">
             <div className="relative w-full p-1 h-full">
               {(isActive || isEnd) &&
                 list.map((item) => (
