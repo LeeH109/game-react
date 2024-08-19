@@ -76,7 +76,7 @@ function App() {
         setList((prevList) => prevList.filter((item) => item.number !== value));
         setNextP((prevNextP) => prevNextP + 1);
         setCurP(null);
-      }, 300);
+      }, 400);
     } else {
       setIsActive(false);
       setIsEnd(true);
@@ -136,7 +136,7 @@ function App() {
                       top: `${item.y}%`,
                       zIndex: points - item.number + 1,
                       backgroundColor: item.number === curP ? "red" : "white",
-                      transition: "background-color 0.7s ease",
+                      transition: "background-color 1s ease",
                     }}
                   >
                     {item.number}
